@@ -1,0 +1,98 @@
+/*为什么给.menu_container设置宽高100%,后面所有效果都失效？*/
+.menu_container {
+  color: #fff;
+}
+.menu_container .menu_title {
+  height: 0.98rem;
+  background-color: #202629;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+.menu_container .menu_title .menu_logo {
+  margin-top: 0.13rem;
+  margin-left: 0.28rem;
+  float: left;
+}
+.menu_container .menu_title .menu_logo img {
+  width: 1.59rem;
+  height: 0.5rem;
+}
+.menu_container .menu_title .menu_attention {
+  width: 1.4rem;
+  height: 0.51rem;
+  font-size: 0.24rem;
+  margin-top: 0.15rem;
+  margin-right: 0.5rem;
+  border: 3px #ffe537 solid;
+  float: right;
+  text-align: center;
+  line-height: 0.51rem;
+}
+.menu_container .menu_title .menu_switch {
+  width: 0.44rem;
+  height: 0.02rem;
+  margin-right: 0.2rem;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  float: right;
+}
+.menu_container .menu_title .menu_switch::before {
+  content: "";
+  height: 0.02rem;
+  margin-top: -0.08rem;
+  background-color: #fff;
+  display: block;
+  transition: 0.5s;
+}
+.menu_container .menu_title .menu_switch::after {
+  content: "";
+  height: 0.02rem;
+  margin-top: 0.14rem;
+  background-color: #fff;
+  display: block;
+  transition: 0.5s;
+}
+.menu_container .menu_title .menu_switch.menu_switch--open {
+  background-color: transparent;
+}
+.menu_container .menu_title .menu_switch.menu_switch--open::before {
+  content: "";
+  height: 0.02rem;
+  margin-top: 0;
+  background-color: #bc3129;
+  display: block;
+  transform: rotate(45deg);
+}
+.menu_container .menu_title .menu_switch.menu_switch--open::after {
+  content: "";
+  height: 0.02rem;
+  margin-top: -0.016rem;
+  background-color: #bc3129;
+  display: block;
+  transform: rotate(-45deg);
+}
+.menu_container .menu_nav {
+  position: fixed;
+  top: 0.98rem;
+  right: 0;
+  font-size: 0.3rem;
+  background-color: #1e1e1e;
+  width: 0;
+  height: 0;
+  z-index: 20;
+  transition: 0.5s;
+  opacity: 0;
+  text-align: center;
+}
+.menu_container .menu_nav li {
+  height: 1.36rem;
+  line-height: 1.36rem;
+  border-top: 1px #2c2c2c solid;
+  overflow: hidden;
+}
+.menu_container .menu_nav.menu_nav--open {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
