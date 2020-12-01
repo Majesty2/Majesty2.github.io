@@ -91,6 +91,9 @@
   border-top: 1px #2c2c2c solid;
   overflow: hidden;
 }
+.menu_container .menu_nav li a {
+  color: #fff;
+}
 .menu_container .menu_nav.menu_nav--open {
   width: 100%;
   height: 100%;
